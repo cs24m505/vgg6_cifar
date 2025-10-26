@@ -8,8 +8,8 @@ This README provides full instructions to reproduce **CS6886W – System Enginee
 
 ```bash
 # Clone repository
-git clone <repo_link_here>
-cd <repo_name>
+git clone https://github.com/cs24m505/vgg6_cifar.git
+cd vgg6_cifar
 
 # (Optional) create and activate virtual environment
 python -m venv vgg_env
@@ -174,6 +174,5 @@ python eval_test_accuracy.py   --data_dir ./data   --checkpoint ./runs/final_bes
 ```
 
 **Notes**
-- If you trained with custom normalization, the script will try to read it from `./runs/final_best/final_test_metrics.json` (or `train_meta.json` / `meta.json`). If not found, it defaults to CIFAR-10 mean/std.
 - Use `--device cpu` if you don’t have a GPU.
-- Output prints a single line: `Test Accuracy: XX.XX%`.
+
