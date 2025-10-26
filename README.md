@@ -1,6 +1,6 @@
 # VGG6 CIFAR-10 Experiment — Command-Line Execution Guide
 
-This README provides full instructions to reproduce **CS6886W – System Engineering for Deep Learning (Assignment 1)** experiments entirely via the **command line** (no Jupyter Notebook required).
+This README provides full instructions to reproduce **CS6886W – System Engineering for Deep Learning (Assignment 1)** experiments entirely via the **command line**.
 
 ---
 
@@ -134,13 +134,13 @@ python -m vgg6_cifar.scripts.plot_curves \
 
 ## 🏆 7. Final Best Configuration (Q4)
 
-Re-run the best model from W&B (e.g., ReLU + Nesterov-SGD + LR 0.1 + BatchNorm):
+Re-run the best model from W&B (e.g., GeLU + Nesterov-SGD + LR 0.01 + BatchNorm):
 
 ```bash
 python -m vgg6_cifar.scripts.train_experiment \
   --data_dir ./data --out_dir ./runs/final_best \
-  --activation relu --optimizer nesterov-sgd \
-  --lr 0.1 --batch_size 200 --epochs 80 \
+  --activation gelu --optimizer nesterov-sgd \
+  --lr 0.01 --batch_size 128 --epochs 200 \
   --momentum 0.9 --use_bn \
   --aug_hflip --aug_crop --aug_cutout --aug_jitter --amp --seed 42 --wandb
 ```
