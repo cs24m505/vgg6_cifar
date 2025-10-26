@@ -1,0 +1,6 @@
+{
+  "test_loss": 0.7550484722137452,
+  "test_top1_acc": 0.9001,
+  "best_val_acc": 0.893,
+  "use_bn": true
+}
